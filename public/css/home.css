@@ -1,14 +1,58 @@
-body{
+body {
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    min-height: 100vh; /* Asegura que el contenido se extienda al menos hasta el 100% de la altura de la ventana */
+    flex-direction: column;
     background-color: aqua;
 }
+
+main {
+    flex: 1; /* Hace que el elemento principal (contenido) se expanda para llenar el espacio restante */
+}
+
+
 
 .contenido{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.container{
+    margin-top: 20%;
+}
+
+.opciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.btn{
+    width: auto;
+}
+
+.oculto {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s ease, opacity 0.5s ease;
+}
+
+.recuerdo{
+    margin-top: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+}
+
+.pulsar{
+    color: grey;
+    padding: 20px;
+    text-align: center;
 }

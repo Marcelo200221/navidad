@@ -24,3 +24,19 @@ Route::get('/home', function(){
 Route::get('/seleccion', function(){
     return view('seleccion');
 })->name('seleccion');
+
+Route::get('/vale', function(){
+    return view('vale');
+})->name('vale');
+
+Route::get('/mami', function(){
+    return view('mami');
+})->name('mami');
+
+Route::get('/tio', function(){
+    return view('tio');
+})->name('tio');
+
+Route::get('/felipe', function(){
+    return view('felipe');
+})->name('felipe');
