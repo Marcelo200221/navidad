@@ -1,37 +1,45 @@
-var estadoVisible = false; // Variable para rastrear el estado actual
+var estadoVisible = 0; // 0: primerTexto, 1: segundoTexto, 2: tercerTexto
 
-    document.addEventListener("click", function() {
-        if (!estadoVisible) {
-            mostrarSegundoTexto();
-        } else {
-            desaparecerAmbosTextos();
-        }
-    });
-
+document.addEventListener("click", function() {
+    if (estadoVisible === 0) {
+        mostrarSegundoTexto();
+    } else if (estadoVisible === 1) {
+        desaparecerAmbosTextos();
+    } else {
+        mostrarTercerTexto();
+    }
+});
 
 function mostrarSegundoTexto() {
-    var segundoTexto = document.getElementById("segundoTexto");
-    segundoTexto.style.visibility = "visible";
-    segundoTexto.style.opacity = 1;
-
-    setTimeout(function() {
-        segundoTexto.classList.remove("oculto");
-    }, 500);
-
-    estadoVisible = true; // Cambiar el estado
-}
-
-function desaparecerAmbosTextos() {
     var primerTexto = document.getElementById("primerTexto");
     var segundoTexto = document.getElementById("segundoTexto");
 
     primerTexto.style.opacity = 0;
-    segundoTexto.style.opacity = 0;
 
     setTimeout(function() {
         primerTexto.style.visibility = "hidden";
-        segundoTexto.style.visibility = "hidden";
-    }, 500);
+        segundoTexto.style.visibility = "visible";
+        segundoTexto.style.opacity = 1;
 
-    estadoVisible = false; // Cambiar el estado
+        estadoVisible = 1; // Cambiar el estado
+    }, 500);
+}
+
+function desaparecerAmbosTextos() {
+    var segundoTexto = document.getElementById("segundoTexto");
+    var tercerTexto = document.getElementById("tercerTexto");
+
+    segundoTexto.style.opacity = 0;
+
+    setTimeout(function() {
+        segundoTexto.style.visibility = "hidden";
+        tercerTexto.style.visibility = "visible";
+        tercerTexto.style.opacity = 1;
+
+        estadoVisible = 2; // Cambiar el estado
+    }, 500);
+}
+
+function mostrarTercerTexto() {
+    // Puedes agregar lógica adicional aquí si es necesario
 }
