@@ -27,8 +27,9 @@ main {
 .opciones{
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .btn{
@@ -58,6 +59,18 @@ main {
 }
 
 .oculto2{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s ease, opacity 0.5s ease;
+}
+
+#imagenes img.foto-4{
+    width: 100px;
+    height: 100px;
+}
+
+.boton{
+    display: none;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.5s ease, opacity 0.5s ease;

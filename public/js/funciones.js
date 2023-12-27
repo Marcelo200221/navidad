@@ -6,7 +6,8 @@ document.addEventListener("click", function() {
     } else if (estadoVisible === 1) {
         desaparecerAmbosTextos();
     } else {
-        mostrarTercerTexto();
+        mostrarImagenes();
+        mostrarBoton();
     }
 });
 
@@ -40,6 +41,23 @@ function desaparecerAmbosTextos() {
     }, 500);
 }
 
-function mostrarTercerTexto() {
-    // Puedes agregar lógica adicional aquí si es necesario
+function mostrarImagenes() {
+    var imagenes = document.getElementById('imagenes');
+    var tercerTexto = document.getElementById('tercerTexto');
+
+    tercerTexto.style.opacity = 0;
+    setTimeout(function(){
+        tercerTexto.style.visibility = "hidden";
+        imagenes.classList.remove("oculto");
+
+        estadoVisible = 2;
+    }, 500);
+
+}
+
+function mostrarBoton(){
+    var boton = document.getElementById('boton');
+    if (boton) {
+        boton.style.display = "block"; // O "inline" o el valor que corresponda a tu diseño
+    }
 }

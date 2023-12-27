@@ -40,3 +40,7 @@ Route::get('/tio', function(){
 Route::get('/felipe', function(){
     return view('felipe');
 })->name('felipe');
+
+Route::get('/despedida', function(){
+    return view('despedida');
+})->name('despedida');

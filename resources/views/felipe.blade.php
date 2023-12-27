@@ -17,9 +17,18 @@
                 inteligencia y humildad que tu tienes, además de tener la capacidad de ayudar al resto, como tu eres capaz, te amo con todo mi corazón.
             </h3>
             <h3 id="tercerTexto" class="oculto">Ahora, quiero que recordemos algunos momentos juntos</h3>
+            <div id="imagenes" class="oculto">
+                <img src="{{asset('img/vale-felipoe.png')}}" alt="">
+                <div>
+                    <h3>No encontré muchos momentos pero este es sin duda uno muy iconico</h3>
+                    <h1>TE AMO <i class="fa-solid fa-heart"></i></h1>
+                </div>
+            </div>
         </div>
     </div>
-    
+    <div style="display: none;" class="boton" id="boton">
+        <a type="button" class="btn btn-danger" href="{{route('despedida')}}">Continuar</a>
+    </div>
 </div>
 <div class="pulsar">
     <p>Pulsa la pantalla para continuar</p>
